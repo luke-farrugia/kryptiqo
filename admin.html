@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin – Kryptiqo</title>
+  <meta name="description" content="Administrative panel for Kryptiqo. Manage articles and affiliate offers with password protection.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <a href="index.html"><img src="img/logo.png" alt="Kryptiqo logo" width="150"></a>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="articles.html">Articles</a></li>
+          <li><a href="offers.html">Affiliate Offers</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="admin.html">Admin</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="admin">
+      <h1>Admin Panel</h1>
+      <form id="login-form">
+        <p>Please enter the admin password to manage content:</p>
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required>
+        <button type="submit">Log In</button>
+        <p id="message" style="color: #ffc107;"></p>
+      </form>
+      <div id="admin-panel" class="hidden">
+        <h2>Manage Affiliate Offers</h2>
+        <form id="add-offer-form" enctype="multipart/form-data">
+          <label for="offerName">Offer Name</label>
+          <input type="text" name="offerName" id="offerName" required>
+          <label for="offerUrl">Tracking URL</label>
+          <input type="url" name="offerUrl" id="offerUrl" required>
+          <label for="offerDesc">Description</label>
+          <textarea name="offerDesc" id="offerDesc" rows="3"></textarea>
+          <!-- Banner image upload: allows admin to choose a graphic to accompany the offer -->
+          <label for="offerImage">Banner Image</label>
+          <input type="file" name="offerImage" id="offerImage" accept="image/*">
+          <button type="submit">Add Offer</button>
+        </form>
+        <ul id="offer-items"></ul>
+        <h2>Manage Articles</h2>
+        <form id="add-article-form">
+          <label for="articleTitle">Article Title</label>
+          <input type="text" name="articleTitle" id="articleTitle" required>
+          <label for="articleSlug">Article File (e.g. article4.html)</label>
+          <input type="text" name="articleSlug" id="articleSlug" required>
+          <label for="articleDesc">Summary</label>
+          <textarea name="articleDesc" id="articleDesc" rows="3"></textarea>
+          <button type="submit">Add Article</button>
+        </form>
+        <ul id="article-items"></ul>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Kryptiqo. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,356 @@
+/*
+  Kryptiqo Stylesheet (SCSS)
+
+  This SCSS file defines the visual theme for the Kryptiqo micro‑application.
+  It uses variables for the colour palette and groups related selectors for
+  clarity. When compiled to CSS, these styles provide a consistent,
+  responsive layout with a dark theme and bright accent colours that evoke
+  cryptocurrency and blockchain technology. To use this SCSS file, compile
+  it to `style.css` using a SASS compiler or manually replicate the
+  variables and nesting in a plain CSS file.
+*/
+
+// Colour palette
+$primary-color: #00bcd4;    // turquoise used for links and buttons
+$secondary-color: #00796b;  // dark teal for subtle accents
+$accent-color: #ffc107;     // amber accent for hover states
+$dark-bg: #0a192f;          // primary background colour
+$mid-bg: #112a44;           // section background (slightly lighter)
+$card-bg: #13294b;          // article card background
+$text-light: #e0f2f1;       // off‑white text colour
+$header-bg: #06142a;        // header and footer background
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: $dark-bg;
+  color: $text-light;
+  line-height: 1.6;
+}
+
+a {
+  color: $primary-color;
+  text-decoration: none;
+  &:hover {
+    color: $accent-color;
+  }
+}
+
+header {
+  background: $header-bg;
+  .header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+  }
+  nav {
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      li {
+        margin-left: 1rem;
+        a {
+          color: $text-light;
+          font-weight: bold;
+          &:hover {
+            color: $primary-color;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Hero section used on the home page and article pages */
+/*
+  Hero section
+
+  The hero component is used throughout the site. On the home page
+  (`.hero-home`) it displays a full‑width background image with text
+  overlaid. On article pages it retains the original split layout.
+*/
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem;
+  background: $mid-bg;
+  position: relative;
+  .hero-content {
+    flex: 1 1 45%;
+    h1 {
+      color: $primary-color;
+      font-size: 2rem;
+      margin-top: 0;
+    }
+    p {
+      margin-bottom: 1rem;
+    }
+    .btn {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      background: $primary-color;
+      color: $dark-bg;
+      border-radius: 4px;
+      font-weight: bold;
+      transition: background 0.3s ease;
+      &:hover {
+        background: $accent-color;
+        color: $dark-bg;
+      }
+    }
+  }
+  .hero-image {
+    flex: 1 1 45%;
+    text-align: center;
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 6px;
+    }
+  }
+}
+
+/* Full‑width hero specifically for the home page
+
+   The `.hero-home` modifier class is applied to the hero section on
+   the home page. Instead of the standard split layout, it turns the
+   hero into a full‑width banner by using a background image that
+   covers the entire section. A semi‑transparent dark overlay ensures
+   the overlaid text remains legible. The accompanying `.hero-image`
+   container is hidden so that only the background image is visible.
+*/
+.hero.hero-home {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 4rem 2rem;
+  min-height: 450px;
+  position: relative;
+}
+.hero.hero-home::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 0;
+}
+.hero.hero-home .hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 600px;
+}
+.hero.hero-home .hero-image {
+  display: none;
+}
+
+/* Full‑width hero for the home page */
+.hero-home {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 4rem 2rem;
+  min-height: 450px;
+  /* Use a dark overlay to improve contrast with white text */
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.55);
+    z-index: 0;
+  }
+  .hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 600px;
+  }
+  .hero-image {
+    display: none;
+  }
+}
+
+/* Featured articles grid on the home page */
+.featured-articles {
+  padding: 2rem;
+  h2 {
+    text-align: center;
+    color: $primary-color;
+    margin-bottom: 1.5rem;
+  }
+  .articles-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: space-between;
+    article {
+      background: $card-bg;
+      border-radius: 6px;
+      overflow: hidden;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+      flex: 1 1 calc(33.333% - 1rem);
+      display: flex;
+      flex-direction: column;
+      img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+      }
+      h3 {
+        margin: 0.5rem 1rem;
+        font-size: 1.25rem;
+        color: $primary-color;
+      }
+      p {
+        margin: 0 1rem 1rem;
+        flex-grow: 1;
+      }
+    }
+  }
+  .btn {
+    display: block;
+    width: max-content;
+    margin: 1rem auto 0;
+    padding: 0.75rem 1.5rem;
+    background: $primary-color;
+    color: $dark-bg;
+    border-radius: 4px;
+    font-weight: bold;
+    text-align: center;
+    transition: background 0.3s ease;
+    &:hover {
+      background: $accent-color;
+      color: $dark-bg;
+    }
+  }
+}
+
+/* Article layout */
+article.content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  h1 {
+    color: $primary-color;
+    margin-top: 0;
+  }
+  p {
+    margin-bottom: 1rem;
+  }
+}
+
+/* Affiliate offers page */
+.offers {
+  padding: 2rem;
+  h1 {
+    text-align: center;
+    color: $primary-color;
+    margin-bottom: 1.5rem;
+  }
+  .offer-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: space-between;
+    .offer {
+      background: $card-bg;
+      border-radius: 6px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+      padding: 1rem;
+      flex: 1 1 calc(50% - 1rem);
+      display: flex;
+      flex-direction: column;
+      h3 {
+        margin-top: 0;
+        color: $primary-color;
+      }
+      p {
+        flex-grow: 1;
+        margin-bottom: 1rem;
+      }
+      .btn {
+        align-self: flex-start;
+        padding: 0.5rem 1rem;
+        background: $primary-color;
+        color: $dark-bg;
+        border-radius: 4px;
+        font-weight: bold;
+        &:hover {
+          background: $accent-color;
+        }
+      }
+    }
+  }
+}
+
+/* Admin page */
+.admin {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  h1 {
+    color: $primary-color;
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  form {
+    margin-bottom: 2rem;
+    background: $card-bg;
+    padding: 1rem;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: bold;
+    }
+    input[type="text"], input[type="url"], input[type="password"], textarea {
+      width: 100%;
+      padding: 0.5rem;
+      margin-bottom: 1rem;
+      border: none;
+      border-radius: 4px;
+    }
+    button {
+      padding: 0.5rem 1rem;
+      background: $primary-color;
+      color: $dark-bg;
+      border: none;
+      border-radius: 4px;
+      font-weight: bold;
+      cursor: pointer;
+      &:hover {
+        background: $accent-color;
+      }
+    }
+  }
+  .hidden {
+    display: none;
+  }
+}
+
+footer {
+  background: $header-bg;
+  text-align: center;
+  padding: 1rem;
+  p {
+    margin: 0;
+    font-size: 0.875rem;
+  }
+}
