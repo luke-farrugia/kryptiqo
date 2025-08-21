@@ -35,9 +35,7 @@
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="contact.html">Contact</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="admin.html">Admin</a>
-            </li>
+            <!-- Admin link removed per request -->
           </ul>
         </div>
       </div>
@@ -52,6 +50,23 @@
         <p><strong>Email:</strong> <a href="mailto:info@kryptiqo.com">info@kryptiqo.com</a></p>
         <p><strong>Address:</strong> Istanbul, Türkiye</p>
         <p>Please note that we cannot provide individual financial advice. Always consult a qualified professional before making investment decisions.</p>
+
+        <!-- Contact form -->
+        <form action="mailto:lukisfarrugia@gmail.com" method="POST" enctype="text/plain" class="mt-4">
+          <div class="mb-3">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" class="form-control" id="name" name="Name" required>
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" name="Email" required>
+          </div>
+          <div class="mb-3">
+            <label for="message" class="form-label">Message</label>
+            <textarea class="form-control" id="message" name="Message" rows="4" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Send Message</button>
+        </form>
       </div>
     </section>
   </main>
