@@ -79,4 +79,16 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
+
+  // Navbar toggler fallback for mobile view
+  // MDB's collapse component sometimes requires explicit toggling
+  // manually add show/hide behaviour on click to ensure the hamburger
+  // menu functions properly on all devices
+  const navbarToggler = document.querySelector('.navbar-toggler');
+  const navbarCollapse = document.getElementById('navbarNav');
+  if (navbarToggler && navbarCollapse) {
+    navbarToggler.addEventListener('click', () => {
+      navbarCollapse.classList.toggle('show');
+    });
+  }
 });
