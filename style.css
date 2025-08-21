@@ -7,7 +7,6 @@
   cryptocurrency and blockchain themes. If you make changes to the SCSS
   file, update this CSS accordingly or use a SASS compiler.
 */
-
 * {
   box-sizing: border-box;
 }
@@ -62,7 +61,6 @@ header nav a:hover {
   padding: 2rem;
   background: #112a44;
 }
-
 /* Full‑width hero specifically for the home page */
 .hero.hero-home {
   background-size: cover;

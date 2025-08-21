@@ -5,40 +5,65 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact – Kryptiqo</title>
   <meta name="description" content="Get in touch with Kryptiqo. Learn more about our mission to educate people about cryptocurrency and how to partner with us.">
+  <!-- MDBootstrap and Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.3.1/mdb.min.css" />
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Navigation -->
   <header>
-    <div class="header-container">
-      <a href="index.html"><img src="img/logo.png" alt="Kryptiqo logo" width="150"></a>
-      <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="articles.html">Articles</a></li>
-          <li><a href="offers.html">Affiliate Offers</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li><a href="admin.html">Admin</a></li>
-        </ul>
-      </nav>
-    </div>
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #06142a;">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <img src="img/logo.png" alt="Kryptiqo logo" width="150">
+        </a>
+        <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="articles.html">Articles</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="offers.html">Affiliate Offers</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="contact.html">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="admin.html">Admin</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
   </header>
 
   <main>
-    <article class="content">
-      <h1>Contact Us</h1>
-      <p>Kryptiqo is dedicated to making the world of cryptocurrency more accessible. If you have questions about our articles, partnership opportunities or feedback about the site, we’d love to hear from you.</p>
-      <p><strong>Email:</strong> <a href="mailto:info@kryptiqo.com">info@kryptiqo.com</a></p>
-      <p><strong>Address:</strong> Istanbul, Türkiye</p>
-      <p>Please note that we cannot provide individual financial advice. Always consult a qualified professional before making investment decisions.</p>
-    </article>
+    <section class="py-5">
+      <div class="container">
+        <h1 class="mb-4">Contact Us</h1>
+        <p>Kryptiqo is dedicated to making the world of cryptocurrency more accessible. If you have questions about our articles, partnership opportunities or feedback about the site, we’d love to hear from you.</p>
+        <p><strong>Email:</strong> <a href="mailto:info@kryptiqo.com">info@kryptiqo.com</a></p>
+        <p><strong>Address:</strong> Istanbul, Türkiye</p>
+        <p>Please note that we cannot provide individual financial advice. Always consult a qualified professional before making investment decisions.</p>
+      </div>
+    </section>
   </main>
 
-  <footer>
+  <!-- Footer -->
+  <footer class="bg-dark text-center py-3">
     <div class="container">
-      <p>&copy; 2025 Kryptiqo. All rights reserved.</p>
+      <p class="mb-0">&copy; 2025 Kryptiqo. All rights reserved.</p>
     </div>
   </footer>
 
   <script src="script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.3.1/mdb.min.js"></script>
 </body>
 </html>

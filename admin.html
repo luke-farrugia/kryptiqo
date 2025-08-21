@@ -5,70 +5,112 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Admin – Kryptiqo</title>
   <meta name="description" content="Administrative panel for Kryptiqo. Manage articles and affiliate offers with password protection.">
+  <!-- MDBootstrap and Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.3.1/mdb.min.css" />
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Navigation -->
   <header>
-    <div class="header-container">
-      <a href="index.html"><img src="img/logo.png" alt="Kryptiqo logo" width="150"></a>
-      <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="articles.html">Articles</a></li>
-          <li><a href="offers.html">Affiliate Offers</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li><a href="admin.html">Admin</a></li>
-        </ul>
-      </nav>
-    </div>
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #06142a;">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <img src="img/logo.png" alt="Kryptiqo logo" width="150">
+        </a>
+        <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="articles.html">Articles</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="offers.html">Affiliate Offers</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="admin.html">Admin</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
   </header>
 
   <main>
-    <section class="admin">
-      <h1>Admin Panel</h1>
-      <form id="login-form">
-        <p>Please enter the admin password to manage content:</p>
-        <label for="password">Password</label>
-        <input type="password" id="password" name="password" required>
-        <button type="submit">Log In</button>
-        <p id="message" style="color: #ffc107;"></p>
-      </form>
-      <div id="admin-panel" class="hidden">
-        <h2>Manage Affiliate Offers</h2>
-        <form id="add-offer-form" enctype="multipart/form-data">
-          <label for="offerName">Offer Name</label>
-          <input type="text" name="offerName" id="offerName" required>
-          <label for="offerUrl">Tracking URL</label>
-          <input type="url" name="offerUrl" id="offerUrl" required>
-          <label for="offerDesc">Description</label>
-          <textarea name="offerDesc" id="offerDesc" rows="3"></textarea>
-          <!-- Banner image upload: allows admin to choose a graphic to accompany the offer -->
-          <label for="offerImage">Banner Image</label>
-          <input type="file" name="offerImage" id="offerImage" accept="image/*">
-          <button type="submit">Add Offer</button>
+    <section class="py-5">
+      <div class="container">
+        <h1 class="mb-4">Admin Panel</h1>
+        <form id="login-form" class="mb-4">
+          <p>Please enter the admin password to manage content:</p>
+          <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" id="password" name="password" class="form-control" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Log In</button>
+          <p id="message" class="mt-2" style="color: #ffc107;"></p>
         </form>
-        <ul id="offer-items"></ul>
-        <h2>Manage Articles</h2>
-        <form id="add-article-form">
-          <label for="articleTitle">Article Title</label>
-          <input type="text" name="articleTitle" id="articleTitle" required>
-          <label for="articleSlug">Article File (e.g. article4.html)</label>
-          <input type="text" name="articleSlug" id="articleSlug" required>
-          <label for="articleDesc">Summary</label>
-          <textarea name="articleDesc" id="articleDesc" rows="3"></textarea>
-          <button type="submit">Add Article</button>
-        </form>
-        <ul id="article-items"></ul>
+        <!-- admin panel hidden until password accepted -->
+        <div id="admin-panel" class="hidden">
+          <h2>Manage Affiliate Offers</h2>
+          <form id="add-offer-form" class="mb-4" enctype="multipart/form-data">
+            <div class="mb-3">
+              <label for="offerName" class="form-label">Offer Name</label>
+              <input type="text" name="offerName" id="offerName" class="form-control" required>
+            </div>
+            <div class="mb-3">
+              <label for="offerUrl" class="form-label">Tracking URL</label>
+              <input type="url" name="offerUrl" id="offerUrl" class="form-control" required>
+            </div>
+            <div class="mb-3">
+              <label for="offerDesc" class="form-label">Description</label>
+              <textarea name="offerDesc" id="offerDesc" rows="3" class="form-control"></textarea>
+            </div>
+            <!-- Banner image upload: allows admin to choose a graphic to accompany the offer -->
+            <div class="mb-3">
+              <label for="offerImage" class="form-label">Banner Image</label>
+              <input type="file" name="offerImage" id="offerImage" class="form-control" accept="image/*">
+            </div>
+            <button type="submit" class="btn btn-primary">Add Offer</button>
+          </form>
+          <ul id="offer-items" class="list-unstyled"></ul>
+          <h2>Manage Articles</h2>
+          <form id="add-article-form" class="mb-4">
+            <div class="mb-3">
+              <label for="articleTitle" class="form-label">Article Title</label>
+              <input type="text" name="articleTitle" id="articleTitle" class="form-control" required>
+            </div>
+            <div class="mb-3">
+              <label for="articleSlug" class="form-label">Article File (e.g. article4.html)</label>
+              <input type="text" name="articleSlug" id="articleSlug" class="form-control" required>
+            </div>
+            <div class="mb-3">
+              <label for="articleDesc" class="form-label">Summary</label>
+              <textarea name="articleDesc" id="articleDesc" rows="3" class="form-control"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Add Article</button>
+          </form>
+          <ul id="article-items" class="list-unstyled"></ul>
+        </div>
       </div>
     </section>
   </main>
 
-  <footer>
+  <!-- Footer -->
+  <footer class="bg-dark text-center py-3">
     <div class="container">
-      <p>&copy; 2025 Kryptiqo. All rights reserved.</p>
+      <p class="mb-0">&copy; 2025 Kryptiqo. All rights reserved.</p>
     </div>
   </footer>
 
   <script src="script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.3.1/mdb.min.js"></script>
 </body>
 </html>

@@ -5,59 +5,100 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Affiliate Offers – Kryptiqo</title>
   <meta name="description" content="Explore carefully selected crypto affiliate offers. Sign up for leading exchanges, wallets and staking platforms using our trusted tracking links.">
+  <!-- MDBootstrap and Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.3.1/mdb.min.css" />
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Navigation -->
   <header>
-    <div class="header-container">
-      <a href="index.html"><img src="img/logo.png" alt="Kryptiqo logo" width="150"></a>
-      <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="articles.html">Articles</a></li>
-          <li><a href="offers.html">Affiliate Offers</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li><a href="admin.html">Admin</a></li>
-        </ul>
-      </nav>
-    </div>
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #06142a;">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <img src="img/logo.png" alt="Kryptiqo logo" width="150">
+        </a>
+        <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="articles.html">Articles</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="offers.html">Affiliate Offers</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="admin.html">Admin</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
   </header>
 
   <main>
-    <section class="offers">
-      <h1>Affiliate Offers</h1>
-      <p>We partner with reputable crypto companies to bring you secure platforms where you can trade, store and earn from digital assets. When you register using the links below, Kryptiqo may receive a commission at no extra cost to you. Always do your own research before signing up.</p>
-      <div class="offer-list">
-        <div class="offer">
-          <h3>CoinPlace Exchange</h3>
-          <p>A trusted crypto exchange offering low fees and fast trading for Bitcoin, Ethereum and hundreds of altcoins.</p>
-          <a href="#" class="btn">Sign Up Now</a>
-        </div>
-        <div class="offer">
-          <h3>SecureWallet</h3>
-          <p>Keep your coins safe with this hardware wallet offering industry‑leading security and easy setup.</p>
-          <a href="#" class="btn">Get Your Wallet</a>
-        </div>
-        <div class="offer">
-          <h3>StakeEarn Platform</h3>
-          <p>Earn interest on your digital assets with flexible staking options and daily payouts.</p>
-          <a href="#" class="btn">Start Earning</a>
-        </div>
-        <div class="offer">
-          <h3>DeFi Lending Hub</h3>
-          <p>Access decentralized loans and lending pools to grow your crypto holdings. Competitive rates and transparent smart contracts.</p>
-          <a href="#" class="btn">Learn More</a>
+    <section class="py-5">
+      <div class="container">
+        <h1 class="text-center mb-4">Affiliate Offers</h1>
+        <p class="text-center mb-5">We partner with reputable crypto companies to bring you secure platforms where you can trade, store and earn from digital assets. When you register using the links below, Kryptiqo may receive a commission at no extra cost to you. Always do your own research before signing up.</p>
+        <div class="row">
+          <div class="col-md-6 mb-4">
+            <div class="card h-100 bg-dark text-white">
+              <div class="card-body">
+                <h3 class="card-title">CoinPlace Exchange</h3>
+                <p class="card-text">A trusted crypto exchange offering low fees and fast trading for Bitcoin, Ethereum and hundreds of altcoins.</p>
+                <a href="#" class="btn btn-primary">Sign Up Now</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 mb-4">
+            <div class="card h-100 bg-dark text-white">
+              <div class="card-body">
+                <h3 class="card-title">SecureWallet</h3>
+                <p class="card-text">Keep your coins safe with this hardware wallet offering industry‑leading security and easy setup.</p>
+                <a href="#" class="btn btn-primary">Get Your Wallet</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 mb-4">
+            <div class="card h-100 bg-dark text-white">
+              <div class="card-body">
+                <h3 class="card-title">StakeEarn Platform</h3>
+                <p class="card-text">Earn interest on your digital assets with flexible staking options and daily payouts.</p>
+                <a href="#" class="btn btn-primary">Start Earning</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 mb-4">
+            <div class="card h-100 bg-dark text-white">
+              <div class="card-body">
+                <h3 class="card-title">DeFi Lending Hub</h3>
+                <p class="card-text">Access decentralized loans and lending pools to grow your crypto holdings. Competitive rates and transparent smart contracts.</p>
+                <a href="#" class="btn btn-primary">Learn More</a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
   </main>
 
-  <footer>
+  <!-- Footer -->
+  <footer class="bg-dark text-center py-3">
     <div class="container">
-      <p>&copy; 2025 Kryptiqo. All rights reserved.</p>
+      <p class="mb-0">&copy; 2025 Kryptiqo. All rights reserved.</p>
     </div>
   </footer>
 
   <script src="script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.3.1/mdb.min.js"></script>
 </body>
 </html>

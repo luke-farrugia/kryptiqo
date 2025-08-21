@@ -5,49 +5,64 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>How Blockchain Works – Kryptiqo</title>
   <meta name="description" content="Understand the mechanics of blockchain technology, the decentralized ledger that powers cryptocurrencies. Learn how blocks are created, transactions are confirmed and why blockchains are secure.">
+  <!-- MDBootstrap and Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.3.1/mdb.min.css" />
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Navigation -->
   <header>
-    <div class="header-container">
-      <a href="index.html"><img src="img/logo.png" alt="Kryptiqo logo" width="150"></a>
-      <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="articles.html">Articles</a></li>
-          <li><a href="offers.html">Affiliate Offers</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li><a href="admin.html">Admin</a></li>
-        </ul>
-      </nav>
-    </div>
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #06142a;">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <img src="img/logo.png" alt="Kryptiqo logo" width="150">
+        </a>
+        <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="articles.html">Articles</a></li>
+            <li class="nav-item"><a class="nav-link" href="offers.html">Affiliate Offers</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            <li class="nav-item"><a class="nav-link" href="admin.html">Admin</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
   </header>
 
   <main>
+    <!-- Hero section for article -->
     <section class="hero">
       <div class="hero-content">
         <h1>How Blockchain Works</h1>
       </div>
-      <div class="hero-image">
+      <div class="hero-image d-none d-md-block">
         <img src="img/article2.png" alt="Connected blocks in a digital network" loading="lazy">
       </div>
     </section>
 
+    <!-- Article content -->
     <article class="content">
-      <p>A <strong>blockchain</strong> is a distributed database or ledger shared across a network of computers. Instead of storing data in one central location, blockchains store information in blocks that are linked together via cryptographic hashes. Although blockchains are best known for their role in cryptocurrency systems, they can be used to make data in any industry immutable【654376930522094†L330-L336】. Because each block cannot be altered once recorded, users only need to trust the system at the moment data are entered, which reduces reliance on auditors and other third parties【654376930522094†L330-L340】.</p>
-      <p>Data on a blockchain are stored chronologically. Once a block is full, its contents are run through a cryptographic hash function, producing a block header that becomes part of the next block. This links each block to the one before it, creating a chain that is extremely difficult to tamper with. The decentralised nature of the network means no single entity controls the ledger; all users collectively maintain the record【654376930522094†L348-L357】.</p>
-      <p>A typical transaction follows a specific sequence. When someone initiates a transaction, it is broadcast to the network and placed in a memory pool with other pending transactions. A miner picks up a batch of recent transactions, forms a block and attempts to solve a computational puzzle. If the miner finds a valid hash, the block is appended to the chain and the transaction is confirmed【654376930522094†L363-L421】. In Bitcoin, this process is called <em>proof‑of‑work</em>: miners compete to generate a hash value meeting the network’s difficulty target, expending substantial computing power【654376930522094†L410-L416】.</p>
-      <p>Blockchain technology offers decentralization, transparency and security. Because copies of the ledger are distributed across many nodes, altering a record on one node would be rejected by the other participants【654376930522094†L428-L435】. Every transaction can be viewed via blockchain explorers, but user identities remain pseudonymous—wallet addresses are visible while personal details are not【654376930522094†L445-L459】. Once blocks are added to the chain, they cannot be modified; any change would break the cryptographic links that secure the chain【654376930522094†L466-L469】.</p>
-      <p>Different blockchains use different consensus mechanisms to validate transactions. Bitcoin relies on proof‑of‑work, which consumes large amounts of energy and time; Ethereum, after its transition to proof‑of‑stake, randomly selects validators from those who have staked coins to propose and confirm new blocks, which is more energy efficient【654376930522094†L410-L426】. Understanding these mechanisms helps explain why some networks are faster or greener than others.</p>
+      <p>A <strong>blockchain</strong> is a distributed database or ledger shared across a network of computers. Instead of storing data in one central location, blockchains store information in blocks that are linked together via cryptographic hashes. Although blockchains are best known for their role in cryptocurrency systems, they can be used to make data in any industry immutable. Because each block cannot be altered once recorded, users only need to trust the system at the moment data are entered, which reduces reliance on auditors and other third parties.</p>
+      <p>Data on a blockchain are stored chronologically. Once a block is full, its contents are run through a cryptographic hash function, producing a block header that becomes part of the next block. This links each block to the one before it, creating a chain that is extremely difficult to tamper with. The decentralised nature of the network means no single entity controls the ledger; all users collectively maintain the record.</p>
+      <p>A typical transaction follows a specific sequence. When someone initiates a transaction, it is broadcast to the network and placed in a memory pool with other pending transactions. A miner picks up a batch of recent transactions, forms a block and attempts to solve a computational puzzle. If the miner finds a valid hash, the block is appended to the chain and the transaction is confirmed. In Bitcoin, this process is called <em>proof‑of‑work</em>: miners compete to generate a hash value meeting the network’s difficulty target, expending substantial computing power.</p>
+      <p>Blockchain technology offers decentralization, transparency and security. Because copies of the ledger are distributed across many nodes, altering a record on one node would be rejected by the other participants. Every transaction can be viewed via blockchain explorers, but user identities remain pseudonymous—wallet addresses are visible while personal details are not. Once blocks are added to the chain, they cannot be modified; any change would break the cryptographic links that secure the chain.</p>
+      <p>Different blockchains use different consensus mechanisms to validate transactions. Bitcoin relies on proof‑of‑work, which consumes large amounts of energy and time; Ethereum, after its transition to proof‑of‑stake, randomly selects validators from those who have staked coins to propose and confirm new blocks, which is more energy efficient. Understanding these mechanisms helps explain why some networks are faster or greener than others.</p>
     </article>
   </main>
 
-  <footer>
+  <!-- Footer -->
+  <footer class="bg-dark text-center py-3">
     <div class="container">
-      <p>&copy; 2025 Kryptiqo. All rights reserved.</p>
+      <p class="mb-0">&copy; 2025 Kryptiqo. All rights reserved.</p>
     </div>
   </footer>
 
   <script src="script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.3.1/mdb.min.js"></script>
 </body>
 </html>

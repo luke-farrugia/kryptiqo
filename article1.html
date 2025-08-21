@@ -5,49 +5,64 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>What is Cryptocurrency? – Kryptiqo</title>
   <meta name="description" content="A beginner’s introduction to cryptocurrencies. Understand what digital money is, how it works, why there are thousands of different coins and what makes crypto both exciting and risky.">
+  <!-- MDBootstrap and Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.3.1/mdb.min.css" />
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Navigation -->
   <header>
-    <div class="header-container">
-      <a href="index.html"><img src="img/logo.png" alt="Kryptiqo logo" width="150"></a>
-      <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="articles.html">Articles</a></li>
-          <li><a href="offers.html">Affiliate Offers</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li><a href="admin.html">Admin</a></li>
-        </ul>
-      </nav>
-    </div>
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #06142a;">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <img src="img/logo.png" alt="Kryptiqo logo" width="150">
+        </a>
+        <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="articles.html">Articles</a></li>
+            <li class="nav-item"><a class="nav-link" href="offers.html">Affiliate Offers</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            <li class="nav-item"><a class="nav-link" href="admin.html">Admin</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
   </header>
 
   <main>
+    <!-- Hero section for article -->
     <section class="hero">
       <div class="hero-content">
         <h1>What Is Cryptocurrency?</h1>
       </div>
-      <div class="hero-image">
+      <div class="hero-image d-none d-md-block">
         <img src="img/article1.png" alt="Abstract digital coins connected by network" loading="lazy">
       </div>
     </section>
 
+    <!-- Article content -->
     <article class="content">
-      <p>Cryptocurrency is <strong>decentralized digital money</strong> used on the internet. Unlike national currencies issued by governments, cryptocurrencies operate through a distributed ledger called <em>blockchain</em>. Bitcoin, the first cryptocurrency, was introduced in 2008 and ushered in a new era of peer‑to‑peer electronic cash. Since then, thousands of coins – including Ethereum, Tether, Solana and Cardano – have been created【384638050843612†L161-L168】.</p>
-      <p>The market has expanded dramatically; there are now more than <strong>16,000 cryptocurrencies</strong> in existence【384638050843612†L172-L178】. Their values vary widely. Bitcoin, the largest by market capitalization, was worth nearly US$900 billion in early 2022, while Ethereum’s market cap was under US$500 billion【384638050843612†L172-L178】. Estimates placed the total crypto market around US$3 trillion at that time【384638050843612†L172-L179】. This proliferation of digital tokens means investors must research each project’s purpose and technology before committing money.</p>
-      <p>What makes cryptocurrencies unique is their ability to let people transfer value online without a central counterparty. Transactions are recorded on a public ledger and settled within minutes, day or night. Enthusiasts argue that crypto offers privacy, security and irreversible transactions that traditional money cannot match【384638050843612†L184-L188】. Yet the <em>volatility</em> of digital assets is striking: for example, the price of Bitcoin surged from about US$30 000 in mid‑2021 to nearly US$70 000 later that year, only to fall back to around US$35 000 in early 2022【986811852637599†L92-L100】.</p>
-      <p>This volatility means cryptocurrencies can be thought of both as a medium of exchange and as a speculative investment. They may serve as a store of value, a unit of account and a medium of exchange, but they also present the possibility of significant gains or losses【384638050843612†L191-L206】. A retiree seeking stable income might avoid such fluctuations, while a younger investor could view crypto as a high‑risk, high‑reward component of a diversified portfolio【384638050843612†L191-L206】. Digital tokens also lack intrinsic value – they are worth only what people are willing to pay for them【986811852637599†L84-L90】.</p>
-      <p>Because no central authority guarantees repayment or manages supply, crypto prices are driven by supply and demand. Some see this decentralization as a benefit – offering freedom from government interference – while others worry about scams, hacks and the environmental impact of mining. As Investopedia notes, cryptocurrencies are secured by cryptography, which makes them extremely difficult to counterfeit, but their <em>price volatility</em>, high energy consumption and occasional use in illicit activities are significant downsides【559062347790685†L286-L306】.</p>
+      <p>Cryptocurrency is <strong>decentralized digital money</strong> used on the internet. Unlike national currencies issued by governments, cryptocurrencies operate through a distributed ledger called <em>blockchain</em>. Bitcoin, the first cryptocurrency, was introduced in 2008 and ushered in a new era of peer‑to‑peer electronic cash. Since then, thousands of coins – including Ethereum, Tether, Solana and Cardano – have been created.</p>
+      <p>The market has expanded dramatically; there are now more than <strong>16,000 cryptocurrencies</strong> in existence. Their values vary widely. Bitcoin, the largest by market capitalization, was worth nearly US$900 billion in early 2022, while Ethereum’s market cap was under US$500 billion. Estimates placed the total crypto market around US$3 trillion at that time. This proliferation of digital tokens means investors must research each project’s purpose and technology before committing money.</p>
+      <p>What makes cryptocurrencies unique is their ability to let people transfer value online without a central counterparty. Transactions are recorded on a public ledger and settled within minutes, day or night. Enthusiasts argue that crypto offers privacy, security and irreversible transactions that traditional money cannot match. Yet the <em>volatility</em> of digital assets is striking: for example, the price of Bitcoin surged from about US$30 000 in mid‑2021 to nearly US$70 000 later that year, only to fall back to around US$35 000 in early 2022.</p>
+      <p>This volatility means cryptocurrencies can be thought of both as a medium of exchange and as a speculative investment. They may serve as a store of value, a unit of account and a medium of exchange, but they also present the possibility of significant gains or losses. A retiree seeking stable income might avoid such fluctuations, while a younger investor could view crypto as a high‑risk, high‑reward component of a diversified portfolio. Digital tokens also lack intrinsic value – they are worth only what people are willing to pay for them.</p>
+      <p>Because no central authority guarantees repayment or manages supply, crypto prices are driven by supply and demand. Some see this decentralization as a benefit – offering freedom from government interference – while others worry about scams, hacks and the environmental impact of mining. As Investopedia notes, cryptocurrencies are secured by cryptography, which makes them extremely difficult to counterfeit, but their <em>price volatility</em>, high energy consumption and occasional use in illicit activities are significant downsides.</p>
     </article>
   </main>
 
-  <footer>
+  <!-- Footer -->
+  <footer class="bg-dark text-center py-3">
     <div class="container">
-      <p>&copy; 2025 Kryptiqo. All rights reserved.</p>
+      <p class="mb-0">&copy; 2025 Kryptiqo. All rights reserved.</p>
     </div>
   </footer>
 
   <script src="script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.3.1/mdb.min.js"></script>
 </body>
 </html>
