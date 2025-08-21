@@ -184,6 +184,13 @@ header nav a:hover {
   object-fit: cover;
   width: 100%;
 }
+
+/* Ensure uniform image heights on the Articles page cards */
+.article-list article img {
+  height: 180px;
+  object-fit: cover;
+  width: 100%;
+}
 /* Article content */
 article.content {
   max-width: 800px;

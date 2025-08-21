@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How to Develop a Smart Contract – Kryptiqo</title>
+  <meta name="description" content="A beginner’s guide to creating smart contracts. Learn the basics of Solidity, setting up development tools, writing and deploying your first contract.">
+  <!-- MDBootstrap and Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.3.1/mdb.min.css" />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #06142a;">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <img src="img/logo.png" alt="Kryptiqo logo" width="150">
+        </a>
+        <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="articles.html">Articles</a></li>
+            <li class="nav-item"><a class="nav-link" href="offers.html">Affiliate Offers</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero section for article -->
+    <section class="hero">
+      <div class="hero-content">
+        <h1>How to Develop a Smart Contract</h1>
+      </div>
+      <div class="hero-image d-none d-md-block">
+        <img src="img/hero14.png" alt="Smart contract development illustration" loading="lazy">
+      </div>
+    </section>
+
+    <!-- Article content -->
+    <article class="content">
+      <p>Smart contracts are self‑executing code stored on a blockchain that enforce the terms of an agreement. To build one, first decide which blockchain you’ll target—Ethereum remains the most popular and uses a language called Solidity. Install a development environment such as Node.js, then use a framework like Hardhat or Truffle to scaffold your project. These tools simplify compiling, testing and deploying contracts.</p>
+      <p>Next, write your contract in Solidity. Start with simple examples like a token contract following the ERC‑20 standard or a basic escrow that releases funds when conditions are met. Pay close attention to data types and visibility (public vs. private), and incorporate checks using require() to ensure functions behave as intended. Write unit tests in JavaScript or TypeScript to validate each function against expected outcomes before deploying to a network.</p>
+      <p>Finally, deploy your contract to a test network such as Goerli or Sepolia using a wallet like MetaMask and your chosen development framework. Verify and publish the contract’s source code so users can audit it. When you’re confident the contract works correctly and securely, you can deploy it to the main network. Keep gas costs in mind—optimizing code to reduce storage and computation can save users money. Always have your code reviewed by experienced developers or auditors to mitigate the risk of exploits.</p>
+    </article>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-center py-3">
+    <div class="container">
+      <p class="mb-0">&copy; 2025 Kryptiqo. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.3.1/mdb.min.js"></script>
+</body>
+</html>
