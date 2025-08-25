@@ -1,304 +1,47 @@
-/*
-  Kryptiqo compiled stylesheet (CSS)
-
-  This file was compiled from `style.scss` and contains all of the rules
-  required to style the Kryptiqo micro‑application. Colours, spacing and
-  typography have been chosen to create a dark, modern look that reflects
-  cryptocurrency and blockchain themes. If you make changes to the SCSS
-  file, update this CSS accordingly or use a SASS compiler.
-*/
-* {
-  box-sizing: border-box;
-}
+/* Basic dark theme styling for Kryptiqo optimised site */
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background: #0a192f;
-  color: #e0f2f1;
-  line-height: 1.6;
+  color: #f5f5f5;
+  background-color: #081c2c;
 }
-a {
-  color: #00bcd4;
+
+h1, h2, h3, h4, h5, h6 {
+  color: #ffffff;
+}
+
+p {
+  color: #d9e2ec;
+}
+
+/* Article cards */
+.featured-articles article.bg-dark {
+  background-color: #0d2c4a;
+  border: 1px solid #15355b;
+}
+
+.featured-articles a {
+  color: #9be7ff;
   text-decoration: none;
 }
-a:hover {
-  color: #ffc107;
-}
-header {
-  background: #06142a;
-}
-header .header-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 1rem;
-}
-header nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-}
-header nav li {
-  margin-left: 1rem;
-}
-header nav a {
-  color: #e0f2f1;
-  font-weight: bold;
-}
-header nav a:hover {
-  color: #00bcd4;
-}
-/* Hero section */
-.hero {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  padding: 2rem;
-  background: #112a44;
-}
-/* Full‑width hero specifically for the home page */
-.hero.hero-home {
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  padding: 4rem 2rem;
-  min-height: 450px;
-  position: relative;
-}
-.hero.hero-home::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.55);
-  z-index: 0;
-}
-.hero.hero-home .hero-content {
-  position: relative;
-  z-index: 1;
-  max-width: 600px;
-}
-.hero.hero-home .hero-image {
-  display: none;
-}
-.hero .hero-content {
-  flex: 1 1 45%;
-}
-.hero .hero-content h1 {
-  color: #00bcd4;
-  font-size: 2rem;
-  margin-top: 0;
-}
-.hero .hero-content p {
-  margin-bottom: 1rem;
-}
-.hero .hero-content .btn {
-  display: inline-block;
-  padding: 0.75rem 1.5rem;
-  background: #00bcd4;
-  color: #0a192f;
-  border-radius: 4px;
-  font-weight: bold;
-  transition: background 0.3s ease;
-}
-.hero .hero-content .btn:hover {
-  background: #ffc107;
-  color: #0a192f;
-}
-.hero .hero-image {
-  flex: 1 1 45%;
-  text-align: center;
-}
-.hero .hero-image img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 6px;
-}
-/* Featured articles */
-.featured-articles {
-  padding: 2rem;
-}
-.featured-articles h2 {
-  text-align: center;
-  color: #00bcd4;
-  margin-bottom: 1.5rem;
-}
-.featured-articles .articles-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-  justify-content: space-between;
-}
-.featured-articles .articles-grid article {
-  background: #13294b;
-  border-radius: 6px;
-  overflow: hidden;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-  flex: 1 1 calc(33.333% - 1rem);
-  display: flex;
-  flex-direction: column;
-}
-.featured-articles .articles-grid article img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-}
-.featured-articles .articles-grid article h3 {
-  margin: 0.5rem 1rem;
-  font-size: 1.25rem;
-  color: #00bcd4;
-}
-.featured-articles .articles-grid article p {
-  margin: 0 1rem 1rem;
-  flex-grow: 1;
-}
-.featured-articles .btn {
-  display: block;
-  width: max-content;
-  margin: 1rem auto 0;
-  padding: 0.75rem 1.5rem;
-  background: #00bcd4;
-  color: #0a192f;
-  border-radius: 4px;
-  font-weight: bold;
-  text-align: center;
-  transition: background 0.3s ease;
-}
-.featured-articles .btn:hover {
-  background: #ffc107;
-  color: #0a192f;
+
+.featured-articles a:hover {
+  text-decoration: underline;
 }
 
-/* Uniform card image sizes
-   Ensure that images in the featured article cards are the same height and
-   maintain aspect ratio by cropping overflow. */
-.featured-articles img {
-  height: 180px;
-  object-fit: cover;
-  width: 100%;
+/* Buttons */
+.btn-secondary {
+  background-color: #4361ee;
+  border: none;
+}
+.btn-secondary:hover {
+  background-color: #3653c0;
 }
 
-/* Ensure uniform image heights on the Articles page cards */
-.article-list article img {
-  height: 180px;
-  object-fit: cover;
-  width: 100%;
-}
-/* Article content */
-article.content {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 2rem;
-}
-article.content h1 {
-  color: #00bcd4;
-  margin-top: 0;
-}
-article.content p {
-  margin-bottom: 1rem;
-}
-/* Offers */
-.offers {
-  padding: 2rem;
-}
-.offers h1 {
-  text-align: center;
-  color: #00bcd4;
-  margin-bottom: 1.5rem;
-}
-.offers .offer-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-  justify-content: space-between;
-}
-.offers .offer-list .offer {
-  background: #13294b;
-  border-radius: 6px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-  padding: 1rem;
-  flex: 1 1 calc(50% - 1rem);
-  display: flex;
-  flex-direction: column;
-}
-.offers .offer-list .offer h3 {
-  margin-top: 0;
-  color: #00bcd4;
-}
-.offers .offer-list .offer p {
-  flex-grow: 1;
-  margin-bottom: 1rem;
-}
-.offers .offer-list .offer .btn {
-  align-self: flex-start;
-  padding: 0.5rem 1rem;
-  background: #00bcd4;
-  color: #0a192f;
-  border-radius: 4px;
+/* Hero content */
+.hero-content h1 {
+  font-size: 2.5rem;
   font-weight: bold;
 }
-.offers .offer-list .offer .btn:hover {
-  background: #ffc107;
-}
-/* Admin */
-.admin {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 2rem;
-}
-.admin h1 {
-  color: #00bcd4;
-  text-align: center;
-  margin-bottom: 1.5rem;
-}
-.admin form {
-  margin-bottom: 2rem;
-  background: #13294b;
-  padding: 1rem;
-  border-radius: 6px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.5);
-}
-.admin form label {
-  display: block;
-  margin-bottom: 0.5rem;
-  font-weight: bold;
-}
-.admin form input[type="text"], .admin form input[type="url"], .admin form input[type="password"], .admin form textarea {
-  width: 100%;
-  padding: 0.5rem;
-  margin-bottom: 1rem;
-  border: none;
-  border-radius: 4px;
-}
-.admin form button {
-  padding: 0.5rem 1rem;
-  background: #00bcd4;
-  color: #0a192f;
-  border: none;
-  border-radius: 4px;
-  font-weight: bold;
-  cursor: pointer;
-}
-.admin form button:hover {
-  background: #ffc107;
-}
-.admin .hidden {
-  display: none;
-}
-/* Footer */
-footer {
-  background: #06142a;
-  text-align: center;
-  padding: 1rem;
-}
-footer p {
-  margin: 0;
-  font-size: 0.875rem;
+
+.hero-content p {
+  font-size: 1.1rem;
 }
