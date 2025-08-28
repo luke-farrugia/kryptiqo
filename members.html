@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<!--
+  Members dashboard page for Kryptiqo.
+
+  This page is accessible only after authentication. It displays the
+  authenticated user’s display name or email, provides a referral link
+  incorporating the user’s unique identifier, and offers a sign‑out button.
+  If no user is signed in when the page loads, a redirect back to the
+  homepage occurs.
+-->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kryptiqo Members Dashboard</title>
+    <!-- External CSS libraries -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.3.1/mdb.min.css"
+    />
+    <!-- Site‑specific styles -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #06142a;">
+        <div class="container">
+          <a class="navbar-brand" href="index.html">
+            <img src="img/logo.png" alt="Kryptiqo logo" width="150" />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-mdb-toggle="collapse"
+            data-mdb-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <i class="fas fa-bars"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="articles.html">Articles</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="offers.html">Affiliate Offers</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact</a>
+              </li>
+              <!-- Additional nav elements (login/dashboard links) injected by script.js -->
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container py-5" style="min-height: 60vh;">
+      <h1 class="mb-4">Welcome, <span id="member-name">Member</span></h1>
+      <div class="mb-3">
+        <label for="referral-link" class="form-label">Your referral link</label>
+        <input
+          type="text"
+          id="referral-link"
+          class="form-control"
+          readonly
+          aria-label="Referral link that you can share with friends"
+        />
+      </div>
+      <button id="logout" class="btn btn-primary">Sign Out</button>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-center py-3">
+      <div class="container">
+        <p class="mb-0">&copy; 2025 Kryptiqo. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- Include global scripts -->
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.3.1/mdb.min.js"></script>
+    <!-- Page‑specific script: update content based on authentication state -->
+    <script>
+      window.addEventListener('load', function () {
+        // Wait until the firebaseAuth object is ready (initialised in script.js)
+        function initMemberPage() {
+          if (!window.firebaseAuth) {
+            // Retry until firebaseAuth is defined
+            setTimeout(initMemberPage, 100);
+            return;
+          }
+          const auth = window.firebaseAuth;
+          auth.onAuthStateChanged(function (user) {
+            if (user) {
+              // Populate name and referral link
+              document.getElementById('member-name').textContent = user.displayName || user.email || 'User';
+              const referralUrl = 'https://kryptiqo.com/?ref=' + user.uid;
+              const referralInput = document.getElementById('referral-link');
+              referralInput.value = referralUrl;
+              referralInput.addEventListener('click', function () {
+                this.select();
+              });
+            } else {
+              // No user signed in – redirect back to home page
+              window.location.href = 'index.html';
+            }
+          });
+          // Attach sign‑out handler
+          document.getElementById('logout').addEventListener('click', function () {
+            auth.signOut();
+          });
+        }
+        initMemberPage();
+      });
+    </script>
+  </body>
+</html>
