@@ -26,7 +26,32 @@ window.addEventListener('load', function () {
     });
   }
 
-  // Helper to load an external script asynchronously and return a promise
+      // Inject share buttons for article pages. These buttons appear at the top of
+      // each article, above the first paragraph, and provide quick sharing
+      // options to Facebook, X (Twitter) and email. The buttons are only
+      // inserted when an <article class="content"> element exists on the page.
+      (function() {
+        const article = document.querySelector('article.content');
+        if (article) {
+          const shareDiv = document.createElement('div');
+          shareDiv.className = 'mb-3';
+          const pageUrl = window.location.href;
+          const pageTitle = document.title || '';
+          // Build share links with encoded URL and title
+          const facebookUrl = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(pageUrl);
+          const twitterUrl = 'https://twitter.com/intent/tweet?url=' + encodeURIComponent(pageUrl) + '&text=' + encodeURIComponent(pageTitle);
+          const emailUrl = 'mailto:?subject=' + encodeURIComponent(pageTitle) + '&body=' + encodeURIComponent('Check out this article: ' + pageUrl);
+          shareDiv.innerHTML =
+            '<span class="me-2 fw-bold">Share:</span>' +
+            '<a href="' + facebookUrl + '" target="_blank" class="me-2 text-info"><i class="fab fa-facebook"></i> Facebook</a>' +
+            '<a href="' + twitterUrl + '" target="_blank" class="me-2 text-info"><i class="fab fa-x-twitter"></i> X</a>' +
+            '<a href="' + emailUrl + '" class="text-info"><i class="fas fa-share"></i> Share</a>';
+          // Insert the share buttons at the beginning of the article
+          article.insertBefore(shareDiv, article.firstElementChild);
+        }
+      })();
+
+      // Helper to load an external script asynchronously and return a promise
   function loadScript(src) {
     return new Promise((resolve, reject) => {
       const script = document.createElement('script');
