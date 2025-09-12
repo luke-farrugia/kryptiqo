@@ -1,0 +1,47 @@
+/* Layout & typography */
+:root{
+  --bg:#0b0e13; --panel:#10151f; --text:#e9eef5; --muted:#aeb7c6; --brand:#7fd1ff; --ring:#8bdcff;
+  --maxw: 980px;
+}
+html{scroll-behavior:smooth;}
+@media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto;} }
+
+body{background:var(--bg); color:var(--text); line-height:1.6;}
+.wrap, .container, .container-lg{max-width:var(--maxw);}
+p{max-width:72ch}
+
+/* Links & focus */
+a{color:var(--brand); text-underline-offset:3px;}
+a:focus-visible, button:focus-visible{outline:2px solid var(--ring); outline-offset:2px; border-radius:8px}
+
+/* Header/nav */
+.site-header{position:sticky; top:0; z-index:1000; background:var(--panel); border-bottom:1px solid #1e2635}
+.site-nav a{padding:.6rem .8rem; display:inline-block}
+.nav-toggle{display:none}
+@media (max-width: 992px){
+  .nav-toggle{display:inline-flex; align-items:center; gap:.5rem; padding:.5rem .7rem; border:1px solid #273149; border-radius:10px; background:#131a26}
+  .nav-menu{display:none}
+  .nav-menu[aria-expanded="true"]{display:block}
+  .nav-menu a{display:block; padding:.7rem .9rem; border-bottom:1px solid #1a2232}
+}
+
+/* Cards/grid */
+.article-grid .col-md-4{display:flex}
+.article-grid .card{background:#121826; border:1px solid #22304a; border-radius:16px; padding:12px; display:flex; flex-direction:column}
+.card h3{font-size:1.15rem; line-height:1.3}
+.card .meta{color:var(--muted); font-size:.9rem}
+.card .btn{margin-top:auto}
+
+/* Images */
+.article-image{width:100%; height:auto; border-radius:12px; display:block; max-height:250px; object-fit:cover}
+img[loading="lazy"]{content-visibility:auto}
+
+/* Buttons */
+.btn, .cta{border-radius:12px; padding:.65rem .9rem}
+.btn-primary{background:#1a2435; border-color:#2b3b59}
+.btn-primary:hover{filter:brightness(1.15)}
+
+/* Tables/code (for articles) */
+table{width:100%; border-collapse:collapse; overflow:auto; display:block}
+th,td{border:1px solid #24304a; padding:.6rem}
+pre,code{background:#0f1726; border:1px solid #22304a; border-radius:8px; padding:.15rem .35rem}
