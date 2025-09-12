@@ -82,8 +82,12 @@ p {
 }
 
 
-/* Override article image styling */
-.article-image {
+/* /* Article card media fixes */
+.article-image,
+.featured-articles img.img-fluid {
+  width: 100%;
+  height: auto;
+  max-height: 250px;
   object-fit: cover;
   border-radius: .5rem;
 }
