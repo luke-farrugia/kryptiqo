@@ -52,8 +52,38 @@ p {
 .article-image {
   width: 100%;
   height: auto;
-  max-height: 250px;
+  max-height: 250px;r
+  ;
+  
+
+
+
+
+}
+
+/* Prevent hero from tucking under fixed navbar on mobile */
+@media (max-width: 768px) {
+  .hero-home .hero-content,
+  .hero-home .hero-content h1,
+  .hero-home {
+    padding-top: 72px;
+  }
+}
+
+/* Buttons inside dark sections: improve contrast */
+.btn-secondary {
+  color: #0b1020;
+  background-color: #94e4ff;
+  border-color: #94e4ff;
+}
+.btn-secondary:hover {
+  background-color: #7fdcff;
+  border-color: #7fdcff;
+}
+
+
+/* Override article image styling */
+.article-image {
   object-fit: cover;
-
-
-
+  border-radius: .5rem;
+}
