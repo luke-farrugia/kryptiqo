@@ -1,451 +1,207 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>All Articles | Kryptiqo</title>
-    <meta
-      name="description"
-      content="Browse Kryptiqo’s library of cryptocurrency and blockchain education articles, from wallet guides to technical analysis."
-    />
-    <!-- MDBootstrap and Font Awesome -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.3.1/mdb.min.css"
-    />
-    <link rel="stylesheet" href="style.css" />
-    <!-- Google tag (gtag.js) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-0F28XCQGKS"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag('js', new Date());
-      gtag('config', 'G-0F28XCQGKS');
-    </script>
-
-  </head>
-  <body>
-    <!-- Navigation -->
-    <header>
-      <nav
-        class="navbar navbar-expand-lg navbar-dark"
-        style="background-color: #06142a;"
-      >
-        <div class="container">
-          <a class="navbar-brand" href="index.html">
-            <img src="img/logo.png" alt="Kryptiqo logo" width="150" />
-          </a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-mdb-toggle="collapse"
-            data-mdb-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <i class="fas fa-bars"></i>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-              <li class="nav-item">
-                <a class="nav-link" href="index.html">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="articles.html"
-                  >Articles</a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="offers.html">Affiliate Offers</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="contact.html">Contact</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-    </header>
-    <main>
-      <!-- Hero section reused from home page but tailored for articles -->
-      <section
-        class="hero hero-home"
-        style="background-image: url('img/hero-bg.jpg');"
-      >
-        <div class="hero-content">
-          <h1>All Articles</h1>
-          <p>
-            Explore our comprehensive guides on cryptocurrency, blockchain
-            technology and investing in digital assets.
-          </p>
-        </div>
-      </section>
-      <!-- Articles listing -->
-      <section class="py-5">
-        <div class="container">
-          <h2 class="text-center mb-4">All Articles</h2>
-          <div class="row article-list">
-            <!-- Article cards -->
-            <div class="col-md-4 mb-4">
-              <article class="h-100 bg-dark rounded p-3">
-                <img
-                  src="img/hero1.png"
-                  class="article-image mb-3"
-                  alt="What Is Cryptocurrency hero"
-                />
-                <h3>
-                  <a
-                    href="article1.html"
-                    class="text-decoration-none"
-                    >What Is Cryptocurrency?</a
-                  >
-                </h3>
-                <p>
-                  Understand the basics of cryptocurrency: what it is, how it works
-                  and why it’s revolutionizing finance.
-                </p>
-              </article>
-            </div>
-            <div class="col-md-4 mb-4">
-              <article class="h-100 bg-dark rounded p-3">
-                <img
-                  src="img/hero2.png"
-                  class="article-image mb-3"
-                  alt="How Blockchain Works hero"
-                />
-                <h3>
-                  <a
-                    href="article2.html"
-                    class="text-decoration-none"
-                    >How Blockchain Works</a
-                  >
-                </h3>
-                <p>
-                  Explore the mechanics behind blockchain technology, including
-                  blocks, nodes and consensus algorithms.
-                </p>
-              </article>
-            </div>
-            <div class="col-md-4 mb-4">
-              <article class="h-100 bg-dark rounded p-3">
-                <img
-                  src="img/hero3.png"
-                  class="article-image mb-3"
-                  alt="Crypto Investing Pros & Cons hero"
-                />
-                <h3>
-                  <a
-                    href="article3.html"
-                    class="text-decoration-none"
-                    >Crypto Investing: Pros &amp; Cons</a
-                  >
-                </h3>
-                <p>
-                  Discover the advantages and risks of investing in
-                  cryptocurrencies, balancing potential rewards with volatility
-                  and security challenges.
-                </p>
-              </article>
-            </div>
-            <div class="col-md-4 mb-4">
-              <article class="h-100 bg-dark rounded p-3">
-                <img
-                  src="img/hero4.png"
-                  class="article-image mb-3"
-                  alt="How to Choose a Cryptocurrency Wallet hero"
-                />
-                <h3>
-                  <a
-                    href="article4.html"
-                    class="text-decoration-none"
-                    >How to Choose a Cryptocurrency Wallet</a
-                  >
-                </h3>
-                <p>
-                  Compare hot and cold wallets, safeguard your private keys and
-                  find the best crypto wallet for your needs.
-                </p>
-              </article>
-            </div>
-            <div class="col-md-4 mb-4">
-              <article class="h-100 bg-dark rounded p-3">
-                <img
-                  src="img/hero5.png"
-                  class="article-image mb-3"
-                  alt="How to Buy Bitcoin Safely hero"
-                />
-                <h3>
-                  <a href="article5.html" class="text-decoration-none"
-                    >How to Buy Bitcoin Safely</a
-                  >
-                  
-                </h3>
-                <p>
-                  Follow a step‑by‑step guide to purchasing Bitcoin securely,
-                  including choosing trusted exchanges and enabling two‑factor
-                  authentication.
-                </p>
-              </article>
-            </div>
-            <div class="col-md-4 mb-4">
-              <article class="h-100 bg-dark rounded p-3">
-                <img
-                  src="img/hero6.png"
-                  class="article-image mb-3"
-                  alt="How to Secure Your Crypto Assets hero"
-                />
-                <h3>
-                  <a href="article6.html" class="text-decoration-none"
-                    >How to Secure Your Crypto Assets</a
-                  >
-                </h3>
-                <p>
-                  Protect your digital assets from hacks and scams with hardware
-                  wallets, multifactor authentication and phishing awareness.
-                </p>
-              </article>
-            </div>
-            <div class="col-md-4 mb-4">
-              <article class="h-100 bg-dark rounded p-3">
-                <img
-                  src="img/hero7.png"
-                  class="article-image mb-3"
-                  alt="How to Stake Cryptocurrencies hero"
-                />
-                <h3>
-                  <a href="article7.html" class="text-decoration-none"
-                    >How to Stake Cryptocurrencies for Passive Income</a
-                  >
-                </h3>
-                <p>
-                  Discover how proof‑of‑stake networks reward you for locking up
-                  tokens and learn to choose staking platforms and validators.
-                </p>
-              </article>
-            </div>
-            <div class="col-md-4 mb-4">
-              <article class="h-100 bg-dark rounded p-3">
-                <img
-                  src="img/hero8.png"
-                  class="article-image mb-3"
-                  alt="How to Understand NFT Marketplaces hero"
-                />
-                <h3>
-                  <a href="article8.html" class="text-decoration-none"
-                    >How to Understand NFT Marketplaces</a
-                  >
-                </h3>
-                <p>
-                  Learn how NFT platforms work, evaluate projects, verify
-                  collections and trade digital collectibles responsibly.
-                </p>
-              </article>
-            </div>
-            <div class="col-md-4 mb-4">
-              <article class="h-100 bg-dark rounded p-3">
-                <img
-                  src="img/hero9.png"
-                  class="article-image mb-3"
-                  alt="How to Mine Cryptocurrency at Home hero"
-                />
-                <h3>
-                  <a href="article9.html" class="text-decoration-none"
-                    >How to Mine Cryptocurrency at Home</a
-                  >
-                </h3>
-                <p>
-                  Set up mining hardware, join a pool and start earning coins
-                  from home while understanding energy costs and profitability.
-                </p>
-              </article>
-            </div>
-            <div class="col-md-4 mb-4">
-              <article class="h-100 bg-dark rounded p-3">
-                <img
-                  src="img/hero10.png"
-                  class="article-image mb-3"
-                  alt="How to Use DeFi Lending Platforms hero"
-                />
-                <h3>
-                  <a href="article10.html" class="text-decoration-none"
-                    >How to Use DeFi Lending Platforms</a
-                  >
-                </h3>
-                <p>
-                  Earn passive income by lending digital assets on
-                  decentralized finance platforms. Learn how DeFi lending works
-                  and assess risks.
-                </p>
-              </article>
-            </div>
-            <div class="col-md-4 mb-4">
-              <article class="h-100 bg-dark rounded p-3">
-                <img
-                  src="img/hero11.png"
-                  class="article-image mb-3"
-                  alt="How to Analyze Crypto Charts hero"
-                />
-                <h3>
-                  <a href="article11.html" class="text-decoration-none"
-                    >How to Analyze Crypto Charts</a
-                  >
-                </h3>
-                <p>
-                  Master technical analysis for crypto trading with
-                  candlestick patterns, indicators and trend analysis.
-                </p>
-              </article>
-            </div>
-            <div class="col-md-4 mb-4">
-              <article class="h-100 bg-dark rounded p-3">
-                <img
-                  src="img/hero12.png"
-                  class="article-image mb-3"
-                  alt="How to File Crypto Taxes hero"
-                />
-                <h3>
-                  <a href="article12.html" class="text-decoration-none"
-                    >How to File Crypto Taxes</a
-                  >
-                </h3>
-                <p>
-                  Navigate tax regulations for cryptocurrencies, learn about
-                  capital gains and use tools to track and report transactions.
-                </p>
-              </article>
-            </div>
-            <div class="col-md-4 mb-4">
-              <article class="h-100 bg-dark rounded p-3">
-                <img
-                  src="img/hero13.png"
-                  class="article-image mb-3"
-                  alt="How to Develop a Smart Contract hero"
-                />
-                <h3>
-                  <a href="article13.html" class="text-decoration-none"
-                    >How to Develop a Smart Contract</a
-                  >
-                </h3>
-                <p>
-                  Learn the basics of developing smart contracts on blockchain
-                  platforms, including Solidity, security best practices and
-                  deployment.
-                </p>
-              </article>
-            </div>
-            <div class="col-md-4 mb-4">
-              <article class="h-100 bg-dark rounded p-3">
-                <img
-                  src="img/hero14.png"
-                  class="article-image mb-3"
-                  alt="How to Participate in Blockchain Governance hero"
-                />
-                <h3>
-                  <a href="article14.html" class="text-decoration-none"
-                    >How to Participate in Blockchain Governance</a
-                  >
-                </h3>
-                <p>
-                  Join decentralized communities, submit proposals and vote to
-                  shape the future of blockchain protocols.
-                </p>
-              </article>
-            </div>
-            <div class="col-md-4 mb-4">
-              <article class="h-100 bg-dark rounded p-3">
-                <img
-                  src="img/hero15.png"
-                  class="article-image mb-3"
-                  alt="Crypto Portfolio Diversification Strategies hero"
-                />
-                <h3>
-                  <a href="article15.html" class="text-decoration-none"
-                    >Crypto Portfolio Diversification Strategies</a
-                  >
-                </h3>
-                <p>
-                  Discover strategies for diversifying your crypto portfolio to
-                  manage risk and optimize returns across sectors and assets.
-                </p>
-              </article>
-            </div>
-            <div class="col-md-4 mb-4">
-              <article class="h-100 bg-dark rounded p-3">
-                <img
-                  src="img/hero16.png"
-                  class="article-image mb-3"
-                  alt="How to Identify and Avoid Crypto Scams hero"
-                />
-                <h3>
-                  <a href="article16.html" class="text-decoration-none"
-                    >How to Identify and Avoid Crypto Scams</a
-                  >
-                </h3>
-                <p>
-                  Learn how to spot common cryptocurrency scams and protect
-                  your investments from fraud and rug pulls.
-                </p>
-              </article>
-            </div>
-            <div class="col-md-4 mb-4">
-              <article class="h-100 bg-dark rounded p-3">
-                <img
-                  src="img/hero18.png"
-                  class="article-image mb-3"
-                  alt="Understanding Crypto Trading Pairs hero"
-                />
-                <h3>
-                  <a href="article17.html" class="text-decoration-none"
-                    >Understanding Crypto Trading Pairs</a
-                  >
-                </h3>
-                <p>
-                  Learn how crypto trading pairs work, the difference between
-                  base and quote currencies and how to read exchange rates.
-                </p>
-              </article>
-            </div>
-            <div class="col-md-4 mb-4">
-              <article class="h-100 bg-dark rounded p-3">
-                <img
-                  src="img/hero19.png"
-                  class="article-image mb-3"
-                  alt="Technical Analysis for Crypto hero"
-                />
-                <h3>
-                  <a href="article18.html" class="text-decoration-none"
-                    >Technical Analysis for Crypto</a
-                  >
-                </h3>
-                <p>
-                  Discover key technical analysis tools for crypto, including
-                  moving averages, MACD, RSI and support and resistance
-                  levels.
-                </p>
-              </article>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-    <footer class="bg-dark text-center py-3">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All Articles | Kryptiqo</title>
+  <meta name="description" content="Browse Kryptiqo’s library of cryptocurrency and blockchain education articles, from wallet guides to technical analysis.">
+  <!-- External stylesheets -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.3.1/mdb.min.css">
+  <!-- Custom stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color:#06142a;">
       <div class="container">
-        <p class="mb-0">&copy; 2025 Kryptiqo. All rights reserved.</p>
+        <a class="navbar-brand" href="index.html">
+          <img src="img/logo.png" alt="Kryptiqo logo" width="150">
+        </a>
+        <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="articles.html">Articles</a></li>
+            <li class="nav-item"><a class="nav-link" href="offers.html">Affiliate Offers</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          </ul>
+        </div>
       </div>
-    </footer>
-    <script src="script.js"></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.3.1/mdb.min.js"
-    ></script>
-  </body>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero section -->
+    <section class="hero hero-home" style="background-image:url('img/hero-bg.jpg');">
+      <div class="hero-content text-center text-light py-5">
+        <h1 class="mb-3">All Articles</h1>
+        <p class="lead">Explore our comprehensive guides on cryptocurrency, blockchain technology and investing in digital assets.</p>
+      </div>
+    </section>
+    <!-- Articles listing -->
+    <section class="py-5">
+      <div class="container">
+        <h2 class="text-center mb-4">All Articles</h2>
+        <!-- Note: Each article card reuses the same placeholder image.  -->
+        <div class="row g-4 article-list">
+          <!-- Article 1 -->
+          <div class="col-md-4">
+            <article class="h-100 bg-dark rounded p-3">
+              <img class="article-image mb-3" src="img/placeholder.jpg" loading="lazy" alt="What is Cryptocurrency?" onerror="this.src='img/placeholder.jpg'">
+              <h3><a href="article1.html" class="text-decoration-none">What Is Cryptocurrency?</a></h3>
+              <p>Understand the basics of cryptocurrency: what it is, how it works and why it’s revolutionizing finance.</p>
+            </article>
+          </div>
+          <!-- Article 2 -->
+          <div class="col-md-4">
+            <article class="h-100 bg-dark rounded p-3">
+              <img class="article-image mb-3" src="img/placeholder.jpg" loading="lazy" alt="How Blockchain Works" onerror="this.src='img/placeholder.jpg'">
+              <h3><a href="article2.html" class="text-decoration-none">How Blockchain Works</a></h3>
+              <p>Explore the mechanics behind blockchain technology, including blocks, nodes and consensus algorithms.</p>
+            </article>
+          </div>
+          <!-- Article 3 -->
+          <div class="col-md-4">
+            <article class="h-100 bg-dark rounded p-3">
+              <img class="article-image mb-3" src="img/placeholder.jpg" loading="lazy" alt="Crypto Investing: Pros &amp; Cons" onerror="this.src='img/placeholder.jpg'">
+              <h3><a href="article3.html" class="text-decoration-none">Crypto Investing: Pros &amp; Cons</a></h3>
+              <p>Discover the advantages and risks of investing in cryptocurrencies, balancing potential rewards with volatility and security challenges.</p>
+            </article>
+          </div>
+          <!-- Article 4 -->
+          <div class="col-md-4">
+            <article class="h-100 bg-dark rounded p-3">
+              <img class="article-image mb-3" src="img/placeholder.jpg" loading="lazy" alt="How to Choose a Cryptocurrency Wallet" onerror="this.src='img/placeholder.jpg'">
+              <h3><a href="article4.html" class="text-decoration-none">How to Choose a Cryptocurrency Wallet</a></h3>
+              <p>Compare hot and cold wallets, safeguard your private keys and find the best crypto wallet for your needs.</p>
+            </article>
+          </div>
+          <!-- Article 5 -->
+          <div class="col-md-4">
+            <article class="h-100 bg-dark rounded p-3">
+              <img class="article-image mb-3" src="img/placeholder.jpg" loading="lazy" alt="How to Buy Bitcoin Safely" onerror="this.src='img/placeholder.jpg'">
+              <h3><a href="article5.html" class="text-decoration-none">How to Buy Bitcoin Safely</a></h3>
+              <p>Follow a step‑by‑step guide to purchasing Bitcoin securely, including choosing trusted exchanges and enabling two‑factor authentication.</p>
+            </article>
+          </div>
+          <!-- Article 6 -->
+          <div class="col-md-4">
+            <article class="h-100 bg-dark rounded p-3">
+              <img class="article-image mb-3" src="img/placeholder.jpg" loading="lazy" alt="How to Secure Your Crypto Assets" onerror="this.src='img/placeholder.jpg'">
+              <h3><a href="article6.html" class="text-decoration-none">How to Secure Your Crypto Assets</a></h3>
+              <p>Protect your digital assets from hacks and scams with hardware wallets, multifactor authentication and phishing awareness.</p>
+            </article>
+          </div>
+          <!-- Article 7 -->
+          <div class="col-md-4">
+            <article class="h-100 bg-dark rounded p-3">
+              <img class="article-image mb-3" src="img/placeholder.jpg" loading="lazy" alt="How to Stake Cryptocurrencies for Passive Income" onerror="this.src='img/placeholder.jpg'">
+              <h3><a href="article7.html" class="text-decoration-none">How to Stake Cryptocurrencies for Passive Income</a></h3>
+              <p>Discover how proof‑of‑stake networks reward you for locking up tokens and learn to choose staking platforms and validators.</p>
+            </article>
+          </div>
+          <!-- Article 8 -->
+          <div class="col-md-4">
+            <article class="h-100 bg-dark rounded p-3">
+              <img class="article-image mb-3" src="img/placeholder.jpg" loading="lazy" alt="How to Understand NFT Marketplaces" onerror="this.src='img/placeholder.jpg'">
+              <h3><a href="article8.html" class="text-decoration-none">How to Understand NFT Marketplaces</a></h3>
+              <p>Learn how NFT platforms work, evaluate projects, verify collections and trade digital collectibles responsibly.</p>
+            </article>
+          </div>
+          <!-- Article 9 -->
+          <div class="col-md-4">
+            <article class="h-100 bg-dark rounded p-3">
+              <img class="article-image mb-3" src="img/placeholder.jpg" loading="lazy" alt="How to Mine Cryptocurrency at Home" onerror="this.src='img/placeholder.jpg'">
+              <h3><a href="article9.html" class="text-decoration-none">How to Mine Cryptocurrency at Home</a></h3>
+              <p>Set up mining hardware, join a pool and start earning coins from home while understanding energy costs and profitability.</p>
+            </article>
+          </div>
+          <!-- Article 10 -->
+          <div class="col-md-4">
+            <article class="h-100 bg-dark rounded p-3">
+              <img class="article-image mb-3" src="img/placeholder.jpg" loading="lazy" alt="How to Use DeFi Lending Platforms" onerror="this.src='img/placeholder.jpg'">
+              <h3><a href="article10.html" class="text-decoration-none">How to Use DeFi Lending Platforms</a></h3>
+              <p>Earn passive income by lending digital assets on decentralized finance platforms. Learn how DeFi lending works and assess risks.</p>
+            </article>
+          </div>
+          <!-- Article 11 -->
+          <div class="col-md-4">
+            <article class="h-100 bg-dark rounded p-3">
+              <img class="article-image mb-3" src="img/placeholder.jpg" loading="lazy" alt="How to Analyze Crypto Charts" onerror="this.src='img/placeholder.jpg'">
+              <h3><a href="article11.html" class="text-decoration-none">How to Analyze Crypto Charts</a></h3>
+              <p>Master technical analysis for crypto trading with candlestick patterns, indicators and trend analysis.</p>
+            </article>
+          </div>
+          <!-- Article 12 -->
+          <div class="col-md-4">
+            <article class="h-100 bg-dark rounded p-3">
+              <img class="article-image mb-3" src="img/placeholder.jpg" loading="lazy" alt="How to File Crypto Taxes" onerror="this.src='img/placeholder.jpg'">
+              <h3><a href="article12.html" class="text-decoration-none">How to File Crypto Taxes</a></h3>
+              <p>Navigate tax regulations for cryptocurrencies, learn about capital gains and use tools to track and report transactions.</p>
+            </article>
+          </div>
+          <!-- Article 13 -->
+          <div class="col-md-4">
+            <article class="h-100 bg-dark rounded p-3">
+              <img class="article-image mb-3" src="img/placeholder.jpg" loading="lazy" alt="How to Develop a Smart Contract" onerror="this.src='img/placeholder.jpg'">
+              <h3><a href="article13.html" class="text-decoration-none">How to Develop a Smart Contract</a></h3>
+              <p>Learn the basics of developing smart contracts on blockchain platforms, including Solidity, security best practices and deployment.</p>
+            </article>
+          </div>
+          <!-- Article 14 -->
+          <div class="col-md-4">
+            <article class="h-100 bg-dark rounded p-3">
+              <img class="article-image mb-3" src="img/placeholder.jpg" loading="lazy" alt="How to Participate in Blockchain Governance" onerror="this.src='img/placeholder.jpg'">
+              <h3><a href="article14.html" class="text-decoration-none">How to Participate in Blockchain Governance</a></h3>
+              <p>Join decentralized communities, submit proposals and vote to shape the future of blockchain protocols.</p>
+            </article>
+          </div>
+          <!-- Article 15 -->
+          <div class="col-md-4">
+            <article class="h-100 bg-dark rounded p-3">
+              <img class="article-image mb-3" src="img/placeholder.jpg" loading="lazy" alt="Crypto Portfolio Diversification Strategies" onerror="this.src='img/placeholder.jpg'">
+              <h3><a href="article15.html" class="text-decoration-none">Crypto Portfolio Diversification Strategies</a></h3>
+              <p>Discover strategies for diversifying your crypto portfolio to manage risk and optimize returns across sectors and assets.</p>
+            </article>
+          </div>
+          <!-- Article 16 -->
+          <div class="col-md-4">
+            <article class="h-100 bg-dark rounded p-3">
+              <img class="article-image mb-3" src="img/placeholder.jpg" loading="lazy" alt="How to Identify and Avoid Crypto Scams" onerror="this.src='img/placeholder.jpg'">
+              <h3><a href="article16.html" class="text-decoration-none">How to Identify and Avoid Crypto Scams</a></h3>
+              <p>Learn how to spot common cryptocurrency scams and protect your investments from fraud and rug pulls.</p>
+            </article>
+          </div>
+          <!-- Article 17 -->
+          <div class="col-md-4">
+            <article class="h-100 bg-dark rounded p-3">
+              <!-- Note: The original site referenced hero18.png for article17. We now reuse the placeholder for consistency. -->
+              <img class="article-image mb-3" src="img/placeholder.jpg" loading="lazy" alt="Understanding Crypto Trading Pairs" onerror="this.src='img/placeholder.jpg'">
+              <h3><a href="article17.html" class="text-decoration-none">Understanding Crypto Trading Pairs</a></h3>
+              <p>Learn how crypto trading pairs work, the difference between base and quote currencies and how to read exchange rates.</p>
+            </article>
+          </div>
+          <!-- Article 18 -->
+          <div class="col-md-4">
+            <article class="h-100 bg-dark rounded p-3">
+              <img class="article-image mb-3" src="img/placeholder.jpg" loading="lazy" alt="Technical Analysis for Crypto" onerror="this.src='img/placeholder.jpg'">
+              <h3><a href="article18.html" class="text-decoration-none">Technical Analysis for Crypto</a></h3>
+              <p>Discover key technical analysis tools for crypto, including moving averages, MACD, RSI and support and resistance levels.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!-- Footer -->
+  <footer class="bg-dark text-center py-3">
+    <div class="container">
+      <p class="mb-0">© 2025 Kryptiqo. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
 </html>

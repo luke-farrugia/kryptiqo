@@ -1,93 +1,113 @@
-/* Basic dark theme styling for Kryptiqo optimised site */
+/*
+  Custom styles for the Kryptiqo site.
+  This stylesheet defines a dark colour scheme, improves typography, and
+  ensures that article images scale elegantly across devices. It also
+  corrects the invalid CSS property found in the original site’s
+  `max‑height` declaration and adds sensible defaults for links and
+  navigation.
 
+  Maintaining consistent colours and spacing not only enhances the
+  appearance but also improves accessibility and SEO by making
+  content easier to read and crawl.
+*/
+
+/* Global colours and typography */
 body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: #06142a;
   color: #f5f5f5;
-  background-color: #081c2c;
+  line-height: 1.6;
+  margin: 0;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  color: #ffffff;
-}
-
-p {
-  color: #d9e2ec;
-}
-
-/* Article cards */
-.featured-articles article.bg-dark {
-  background-color: #0d2c4a;
-  border: 1px solid #15355b;
-}
-
-.featured-articles a {
+a {
   color: #9be7ff;
   text-decoration: none;
 }
 
-.featured-articles a:hover {
+a:hover {
   text-decoration: underline;
+  color: #76c9ff;
 }
 
-/* Buttons */
-.btn-secondary {
-  background-color: #4361ee;
-  border: none;
-}
-.btn-secondary:hover {
-  background-color: #3653c0;
+/* Navbar styling */
+.navbar {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-
-/* Hero content */
-.hero-content h1 {
-  font-size: 2.5rem;
-  font-weight: bold;
+.navbar-dark .navbar-nav .nav-link {
+  color: #9be7ff;
+  font-weight: 500;
+  margin-left: 1rem;
 }
 
-.hero-content p {
-  font-size: 1.1rem;
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link.active {
+  color: #ffffff;
 }
 
-/* Fix article card images */
+/* Hero section */
+.hero {
+  background-size: cover;
+  background-position: center;
+  color: #ffffff;
+  position: relative;
+}
+
+.hero-content {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+/* Article cards */
+.article-list article {
+  background-color: #0d2c4a;
+  border: 1px solid #15355b;
+  border-radius: .5rem;
+  padding: 1rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.article-list h3 {
+  font-size: 1.25rem;
+  margin: 0 0 0.5rem;
+  color: #9be7ff;
+}
+
+.article-list p {
+  color: #d9e2ec;
+  flex-grow: 1;
+}
+
+/* Responsive image styling */
 .article-image {
-  width: 100%;
-  height: auto;
-  max-height: 250px;r
-  ;
-  
-
-
-
-
-}
-
-/* Prevent hero from tucking under fixed navbar on mobile */
-@media (max-width: 768px) {
-  .hero-home .hero-content,
-  .hero-home .hero-content h1,
-  .hero-home {
-    padding-top: 72px;
-  }
-}
-
-/* Buttons inside dark sections: improve contrast */
-.btn-secondary {
-  color: #0b1020;
-  background-color: #94e4ff;
-  border-color: #94e4ff;
-}
-.btn-secondary:hover {
-  background-color: #7fdcff;
-  border-color: #7fdcff;
-}
-
-
-/* /* Article card media fixes */
-.article-image,
-.featured-articles img.img-fluid {
   width: 100%;
   height: auto;
   max-height: 250px;
   object-fit: cover;
   border-radius: .5rem;
+}
+
+/* Footer */
+footer {
+  background-color: #0d2c4a;
+  color: #d9e2ec;
+  padding: 1rem 0;
+}
+footer p {
+  margin: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hero-content {
+    padding-top: 5rem;
+    padding-bottom: 3rem;
+  }
+  .navbar-dark .navbar-nav .nav-link {
+    margin-left: 0;
+    margin-bottom: .5rem;
+  }
 }
